@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body,html {
+        font-family: "Baloo Bhai 2", cursive;
+        overflow-x: hidden;
+      }
+      .menu{
+        height: 640px;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        justify-content: space-between;
+      }
+      nav ul {
+        display: inline-block;
+        list-style: none;
+        margin-right: 80px;
+        margin-bottom: 25px;
+      }
+      nav ul li {
+        display: inline-block;
+        margin-right: 25px;
+        margin-bottom: 22px;
+        color: rgb(71, 123, 168);
+      }
+      nav ul li a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: rgb(36, 204, 154);
+      }
+      nav ul li a:hover {
+        background-color: orange;
+        color: black;
+        border-radius: 10px;
+      }
+      .logo {
+        font-size: 3.4rem;
+        font-weight: 700;
+        margin-left: 100px;
+        margin-bottom: 15px;
+        position: relative;
+        top: -5px;
+        color: aliceblue;
+      }
+      .logo span {
+        color: orange;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background: url("ec.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .col {
+        width: 450px;
+      }
+      .row .col h1 {
+        color: aliceblue;
+        font-size: 2.2rem;
+        position: relative;
+        left: 1000px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+      }
+      .row .col h1 span {
+        color: orange;
+        margin-bottom: 90px;
+        position: relative;
+        top: -15px;
+      
+      }
+
+      .row .col p {
+        position: relative;
+        left: 1000px;
+        color: aliceblue;
+        font-size: 1.0rem;
+      }
+      .btn{
+        display: inline-block;
+        height: 36px;
+        width: 170px;
+        background-color: orange;
+        border-radius: 10px;
+        position: relative;
+        right: -1100px;
+        bottom: -15px;
+        font-family: "Baloo Bhai 2", cursive;
+        font-size: 1.3rem;
+        padding-left: 5px;
+      }
+      .btn:hover{
+        background: none;
+        color: aliceblue;
+        border: 3px solid orange;
+      }
+      .category{
+        margin: 50px 0px;
+      }
+     
+      
+     .category .row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 70px;
+      }
+     .category .row .col-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin-top: 100px;
+        
+        margin-left: 30px;
+        margin-right: 30px;
+        padding: 35px 10px;
+      } 
+      
+     
+    
+    
+    
+      
+      
+      
+      .col-3 img{
+        border: 4px solid black;
+        background-color: wheat;
+        transition: all 0.3s ease;
+      }
+      .col-3 img:hover{
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      
+        
+      }
+      .features .cont .row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 70px;
+      }
+     .features .cont .row .col-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20%;
+        flex-basis: 25%;
+      
+        
+      
+        
+      }
+      .features .cont .row .col-4 img {
+        border: 4px solid black;
+        background-color: wheat;
+        transition: all 0.3s ease;
+      }
+      .features .cont .row .col-4 img:hover{
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+        background-color: ghostwhite;
+      
+      }
+
+
+      .title{
+        text-align: center;
+        margin: 0 auto 80px;
+        position: relative;
+        line-height: 60px;
+      }
+      .title::after{
+content: "";
+background-color: rgb(87, 49, 122);
+width: 80px;
+height: 5px;
+border-radius: 5px;
+position: absolute;
+bottom: 0;
+transform: translateX(-50%);
+right: 680px;
+
+      }
+    .category .title{
+        text-align: center;
+        margin: 0 auto 80px;
+        position: relative;
+        line-height: 60px;
+        bottom: -130px;
+        
+      }
+    .category .title::after{
+content: "";
+background-color: rgb(87, 49, 122);
+width: 80px;
+height: 5px;
+border-radius: 5px;
+position: absolute;
+bottom: 10px;
+transform: translateX(-50%);
+right: 680px;
+    }
+      .latest{
+        height: 780px;
+      }
+     .latest .col-5 img{
+        height: 400px;
+        width: 400px;
+        margin: 170px 50px 0 20px;
+        position: relative;
+        left: 100px;
+        bottom: 40px;
+      }
+     
+      .col-5 img:hover{
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+      .latest .conti .row .col-5 small{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        top: -400px;
+        left: 630px;
+        font-size: 1.0rem;
+
+      }
+      .latest .conti .row .col-5{
+        width: 50%;
+      }
+
+      
+      .latest .conti .row .col-5 p{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        top: -400px;
+        left: 630px;
+        font-size: 2.2rem;
+
+      }
+
+        .latest .conti .row .col-5 h1{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        top: -400px;
+        left: 630px;
+        font-size: 2.5rem;
+
+        }
+        .latest{
+      background-color: rgb(255, 255, 255);
+        }
+        .ctn{
+          height: 40px;
+          width: 100px;
+          background-color: rgb(224, 136, 153);
+          border-radius: 10px;
+          font-size: 1.2rem;
+          position: relative;
+          bottom: 380px;
+          left: 940px;
+          font-family: "Baloo Bhai 2", cursive;
+        }
+        .ctn:hover{
+          background: none;
+          border: 3px solid crimson;
+          color: black;
+        }
+        .footer{
+          background-color: black;
+          color: aliceblue;
+          font-size: 15px;
+          padding: 60px 0 20px;
+        }
+        .footer h3{
+          color: aliceblue;
+        }
+        .col-6 .col-7 .col-8 .col-9{
+          margin-bottom: 20px;
+
+        }
+        .col-6{
+          flex-basis: 30%;
+
+        }
+        .col-7{
+          flex: 1;
+          text-align: center;
+        }
+          .col-8{
+            flex-basis: 12%;
+            text-align: center;
+          }
+            .col-9{
+              flex-basis: 12%;
+            text-align: center;
+            }
+            .col-9 h3{
+              position: relative;
+              bottom:-70px;
+              font-size:1.7rem;
+            }
+            .footer{
+              height: 650px;
+            }
+            .footer h1{
+              position: relative;
+              bottom: 100px;
+              font-size: 2.5rem;
+            }
+            .footer h1 span{
+              color: orange;
+            }
+            .footer .col-6 h3{
+              position: relative;
+text-align: center;
+bottom:-208px ;
+            }
+            .footer .col-6 p{
+              position: relative;
+text-align: center;
+bottom:-200px ;
+            }
+            .col-8 ul{
+              position: relative;
+              right: 630px;
+            }
+            .col-9 ul{
+              position: relative;
+              left: 5px;
+              bottom: -90px;
+            }
+            .footer .col-8 ul li{
+              text-decoration: none;
+              list-style-type: none;
+              margin-bottom: 5px;
+            }
+            .footer .col-9 ul li{
+              text-decoration: none;
+              list-style-type: none;
+              margin-bottom: 5px;
+            }
+            .cpy {
+              text-align: center;
+              list-style: none;
+            }
+            .logo img{
+              height: 80px;
+              width: 120px;
+            }
+             
+    </style>
+  </head>
+  <body>
+    <section class="menu">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">RED<span>STORE!</span></div>
+        <nav>
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">products</a></li>
+            <li><a href="#">account</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h1>GIVE YOUR WOEKOUT <br /><span>A NEW STYLE!</span></h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus quibusdam asperiores sunt, dolores tenetur sequi
+            voluptatem sit molestiae beatae libero porro pariatur nesciunt
+            voluptates, laboriosam dignissimos at modi ipsam reprehenderit!
+          </p>
+          <button class="btn">explore now &#8594;</button>
+        
+      </div>
+    </div>
+  </section>
+    <section class="products">
+    <div class="category">
+      <h2 class="title">jeans product</h2>
+
+      <div class="row">
+        <div class="col-3">
+          
+                      <img src="jeans.jfif" alt="" srcset="">
+                      <h4>printed T-shirts</h4>
+                      <p>$300</p>
+        </div>
+      
+      
+        <div class="col-3">
+          <img src="jeans2.jfif" alt="" srcset="">
+          <h4>printed T-shirts</h4>
+          <p>$300</p>
+        </div>
+      
+      
+        <div class="col-3">
+          <img src="jeans3.jfif" alt="" srcset="">
+          <h4>printed T-shirts</h4>
+          <p>$300</p>
+        </div>
+        <div class="col-3">
+          <img src="jeans4.jfif" alt="" srcset="">
+          <h4>printed T-shirts</h4>
+          <p>$300</p>
+        </div>
+        <div class="col-3">
+          <img src="tsh.jfif" alt="" srcset="">
+          <h4>printed T-shirts</h4>
+          <p>$300</p>
+        </div>
+       
+      </div>
+    </div>
+    </section>
+    <section class="features">
+<div class="cont">
+  <h2 class="title">shirt product</h2>
+  <div class="row">
+    <div class="col-4">
+      <img class="s1" src="shirt1.jfif" alt="">
+      <h4>printed T-shirts</h4>
+      <p>$300</p>
+    </div>
+    <div class="col-4">
+      <img src="shirt2.jfif" alt="">
+      <h4>printed T-shirts</h4>
+      <p>$300</p>
+  </div>
+  <div class="col-4">
+    <img src="shirt3.jfif" alt="">
+    <h4>printed T-shirts</h4>
+    <p>$300</p>
+</div>
+<div class="col-4">
+  <img src="shirt.jfif" alt="">
+  <h4>printed T-shirts</h4>
+  <p>$300</p>
+  </div>
+  <div class="col-4">
+    <img src="shirt4.jfif" alt="">
+    <h4>printed T-shirts</h4>
+    <p>$300</p>
+    </div>
+  </div>
+  </div>
+
+    </section>
+    <section class="features">
+      <div class="cont">
+        <h2 class="title">shoes product</h2>
+        <div class="row">
+          <div class="col-4">
+            <img class="s1" src="shoes.jfif" alt="">
+            <h4>printed T-shirts</h4>
+            <p>$300</p>
+          </div>
+          <div class="col-4">
+            <img src="shoes1.jfif" alt="">
+            <h4>printed T-shirts</h4>
+            <p>$300</p>
+        </div>
+        <div class="col-4">
+          <img src="shoes2.jfif" alt="">
+          <h4>printed T-shirts</h4>
+          <p>$300</p>
+      </div>
+      <div class="col-4">
+        <img src="shoes3.jfif" alt="">
+        <h4>printed T-shirts</h4>
+        <p>$300</p>
+        </div>
+        <div class="col-4">
+          <img src="shoes4.jfif" alt="">
+          <h4>printed T-shirts</h4>
+          <p>$300</p>
+          </div>
+        </div>
+        </div>
+       </section>
+            <section class="features">
+          <div class="cont">
+            <h2 class="title">shirt product</h2>
+            <div class="row">
+              <div class="col-4">
+                <img class="s1" src="watch.jfif" alt="">
+                <h4>printed T-shirts</h4>
+                <p>$300</p>
+              </div>
+              <div class="col-4">
+                <img src="watch1.jfif" alt="">
+                <h4>printed T-shirts</h4>
+                <p>$300</p>
+            </div>
+            <div class="col-4">
+              <img src="watch2.jfif" alt="">
+              <h4>printed T-shirts</h4>
+              <p>$300</p>
+          </div>
+          <div class="col-4">
+            <img src="watch4.jfif" alt="">
+            <h4>printed T-shirts</h4>
+            <p>$300</p>
+            </div>
+            <div class="col-4">
+              <img src="watch5.jfif" alt="">
+              <h4>printed T-shirts</h4>
+              <p>$300</p>
+              </div>
+            </div>
+            </div>
+            </section>
+          
+    <section class="latest">
+      <div class="conti">
+        <div class="row">
+          <div class="col-5">
+            <img src="smart.jpeg" alt="">
+          </div>
+          <div class="col-5">
+            <p>exclusively avialable on red STORE</p>
+            <h1>smart band 4</h1>
+            <small>Willful Smart Watch for Android Phones and iOS Phones Compatible iPhone Samsung, IP68 Swimming Waterproof Smartwatch Fitness Tracker Fitness Watch Heart Rate Monitor Smart Watches for Men Women Green
+              </small>
+              <button class="ctn">buy now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+    <div class="footer">
+      <div class="cont">
+        <div class="row">
+          <div class="col-6">
+            <h3 >dowload our app</h3>
+            <p >download app for androide and ios mobile phone.</p>
+           
+          </div>
+          <div class="col-7">
+            <h1>RED<span>STORE</span></h1>
+            <p >our porpuse is to sustanibaly make the pleasure and benefits of sports assecible to many</p>
+          </div>
+          <div class="col-8">
+            <ul>
+              <li>coupons</li>
+              <li>blog post</li>
+              <li>return policy</li>
+              <li>join affiliate</li>
+              
+            </ul>
+          </div>
+          <div class="col-9">
+            <h3>follow us</h3>
+            <ul>
+              <li>facebook</li>
+              <li>twiter</li>
+              <li>instagram</li>
+              <li>youtube</li>
+            </ul>
+                        
+        </div>
+        <div class="logo">
+          <img src="logop.jfif" alt="">
+        </div>
+        <p class="cpy">123 fifth evenue ,NY ,10160, Newyork ,USA| phone: 800-123-4560 |Email contact@examp</p>
+<p class="cpy">copyright @ 2020 outdoor edventure</p>
+    
+        
+      </div>
+    </div>
+    </section>
+  </body>
+</html>
